@@ -157,7 +157,6 @@ function shouldTimerRun(flag) {
       }
       else if (mode == "quote") {
          timer = 0;
-         // timerElement.style.visibility = "visible";
          timerElement.innerText = timer;
          countUp = setInterval(() => {
             timer++;
@@ -167,7 +166,6 @@ function shouldTimerRun(flag) {
    }
    else {
       timerElement.classList.add("hidden");
-      // timerElement.style.visibility = "hidden";
       clearInterval(countDown);
       clearInterval(countUp);
    }
