@@ -1,0 +1,242 @@
+/* Base Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+:root {
+	--bg-color: #181818;
+	--main-color: #eee;
+	--sub-color: #444;
+	--rgb-animation: rgb 5s linear 0s infinite;
+	--rgb-bg-animation: rgb-bg 5s linear 0s infinite;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color);
+	width: 55%;
+	margin: 0 auto;
+	font-family: "Oxygen";
+}
+
+/* Sections */
+
+.top {
+	justify-content: space-between;
+	align-items: center;
+	margin: 2.5rem auto;
+}
+
+.middle {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 6.3rem auto 6.8rem;
+}
+
+.typing-test {
+	justify-content: center;
+	display: initial;
+}
+
+.result {
+	justify-content: space-evenly;
+	gap: 4.75rem;
+	display: initial;
+}
+
+.bottom {
+	font-size: 1.2rem;
+	justify-content: center;
+	word-spacing: 3px;
+}
+
+/* Top Elements */
+
+.logo {
+	font-size: 2.7rem;
+}
+
+.mode,
+.time {
+	font-size: 1rem;
+	justify-content: flex-end;
+	gap: 0.5em;
+	line-height: 1.55;
+}
+
+.text-button:hover,
+.text-button.active {
+	animation: var(--rgb-animation);
+}
+
+.text-button:hover {
+	cursor: pointer;
+}
+
+/* Typing Test Elements */
+
+.text {
+	height: 8.5rem;
+	overflow: hidden;
+	font-size: 1.65rem;
+}
+
+.word {
+	margin: 0.42rem;
+	display: inline-block;
+}
+
+.input {
+	position: absolute;
+	opacity: 0;
+}
+
+.timer {
+	color: black;
+	position: absolute;
+	top: 8.15rem;
+	z-index: -1;
+	font-size: 13rem;
+}
+
+.caret {
+	position: absolute;
+	top: 270px;
+	left: 312px;
+	height: 2.3rem;
+	width: 3px;
+	border-radius: 3px;
+	transition: 0.1s ease;
+}
+
+/* Result Elements */
+
+.wpm-group,
+.acc-group {
+	height: 8.5rem;
+}
+
+.wpm-text,
+.acc-text {
+	font-size: 2.25rem;
+}
+
+.acc-percent-symbol {
+	font-size: 3.5rem;
+}
+
+.wpm,
+.acc {
+	font-size: 4.5rem;
+	line-height: 0.97;
+}
+
+/* */
+
+.restart {
+	margin-top: 4rem;
+	position: relative;
+}
+
+.restart:hover {
+	transition: 0.4s;
+	color: var(--main-color);
+	cursor: pointer;
+}
+
+/* Bottom Elements */
+
+.love {
+	margin: 0 7px;
+	animation: heart-beat 1.1s linear 0.75s infinite;
+}
+
+/* Utility Classes */
+
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.hidden {
+	display: none;
+}
+
+.sub {
+	color: var(--sub-color);
+}
+
+.correct,
+.rgb {
+	animation: var(--rgb-animation);
+}
+
+.rgb-bg {
+	animation: var(--rgb-bg-animation);
+}
+
+.incorrect {
+	color: var(--main-color);
+}
+
+.error {
+	text-decoration: underline;
+	text-decoration-color: var(--main-color);
+	text-decoration-thickness: 2px;
+}
+
+/* Animations */
+
+@keyframes rgb {
+	0% {
+		color: #f44336;
+	}
+	25% {
+		color: #ffc107;
+	}
+	50% {
+		color: #4caf50;
+	}
+	75% {
+		color: #3f51b5;
+	}
+	100% {
+		color: #f44336;
+	}
+}
+
+@keyframes rgb-bg {
+	0% {
+		background-color: #f44336;
+	}
+	25% {
+		background-color: #ffc107;
+	}
+	50% {
+		background-color: #4caf50;
+	}
+	75% {
+		background-color: #3f51b5;
+	}
+	100% {
+		background-color: #f44336;
+	}
+}
+
+@keyframes heart-beat {
+	25% {
+		transform: scale(1.125);
+	}
+	30%,
+	100% {
+		transform: scale(1);
+	}
+}

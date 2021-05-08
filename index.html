@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/6a234d7a04.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+   <script src="script.js" defer></script>
+   <title>Koalatype | Typing Test Website</title>
+</head>
+
+<body>
+   <main>
+      <section class="top flex">
+         <div class="logo rgb">koalatype</div>
+         <div class="settings sub">
+            <div class="mode flex">
+               <div class="text-button active">random</div>
+               <div class="text-button">quote</div>
+            </div>
+            <div class="time flex">
+               <div class="text-button">15</div>
+               <div class="text-button active">30</div>
+               <div class="text-button">60</div>
+               <div class="text-button">120</div>
+            </div>
+         </div>
+      </section>
+      <section class="middle flex">
+         <section class="typing-test flex">
+            <div class="timer"></div>
+            <div class="caret rgb-bg"></div>
+            <div class="text sub" onclick="inputElement.focus();"></div>
+            <textarea class="input"></textarea>
+         </section>
+         <section class="result flex">
+            <div class="wpm-group">
+               <div class="wpm-text sub">wpm</div>
+               <div class="wpm rgb"></div>
+            </div>
+            <div class="acc-group">
+               <div class="acc-text sub">acc</div>
+               <div class="acc rgb"></div>
+            </div>
+         </section>
+         <div class="restart fas fa-redo-alt fa-lg sub" onclick="restartTest();"></div>
+      </section>
+      <section class="bottom flex sub">
+         Made with <span class="love">💖</span> by Bharat
+      </section>
+   </main>
+</body>
+
+</html>
